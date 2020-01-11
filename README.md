@@ -66,4 +66,4 @@ If you want to get more help, join the unofficial [Discord API server](https://d
 * [Old repository](https://github.com/DSharpPlus/Example-Bots)
 * [DSharpPlus source on GitHub](https://github.com/DSharpPlus/DSharpPlus)
 * [DSharpPlus Discord server](https://discord.gg/TtjsTFB)
-* [#dotnet_dsharpplus on Discord API server](https://discord.gg/N4WeVd)
+* [#dotnet_dsharpplus on Discord API server](https://discord.gg/discord-api)
