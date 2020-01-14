@@ -7,9 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DSharpPlus" Version="4.0.0-nightly-00649" />
-    <PackageReference Include="DSharpPlus.CommandsNext" Version="4.0.0-nightly-00649" />
-    <PackageReference Include="DSharpPlus.VoiceNext" Version="4.0.0-nightly-00649" />
+    <PackageReference Include="DSharpPlus" Version="4.0.0-nightly-00653" />
+    <PackageReference Include="DSharpPlus.CommandsNext" Version="4.0.0-nightly-00653" />
+    <PackageReference Include="DSharpPlus.VoiceNext" Version="4.0.0-nightly-00653" />
   </ItemGroup>
 
 </Project>
