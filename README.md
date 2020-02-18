@@ -24,12 +24,11 @@ In order to run the bots, you must first create an application for them, build t
 
 ### Create the application
 1. Go to [my applications](https://discordapp.com/developers/applications/me) page on Discord Developer portal.
-2. Press the [**new app** button](http://i.imgur.com/IVsPyNw.png).
-3. [**New app** page](http://i.imgur.com/3mrEG9x.png) will open. Enter your bot's name in the **app name** field (1), and its description in the **description** field (2).
-   * You can optionally give it an avatar by pressing on the **avatar** button (3).
-4. When you're done, press the [**create app** button](http://i.imgur.com/ur3HFng.png).
-5. When the app is created, press the [**create bot user** button](http://i.imgur.com/b69CHy7.png).
-6. Once this is done, you will need to copy the **bot's token**. Under **app bot user**, there's a **token** field, press [**click to reveal**](http://i.imgur.com/00b4Nt8.png) and copy [**the resulting value**](http://i.imgur.com/Lt2uhcN.png).
+2. Press the [**new app** button](https://storage.alnmrc.com/90628f97e29f42cab9e8d4fd671891c1.png).
+3. [**New app** page](https://storage.alnmrc.com/461efa889e4e493297ae495179c6aef7.png) will open. Enter your bot's name in the **name** field.
+4. When you're done, press the [**create** button](https://storage.alnmrc.com/16b854aad8404230baecd98c7a2d6535.png).
+5. When the app is created, click **bot** then press the [**add bot** button](https://storage.alnmrc.com/1d3a26369f1c4d3b859e103c647333db.png).
+6. Once this is done, you will need to copy the **bot's token**. Under **app bot user**, there's a **token** field, press copy [**the resulting value**](https://storage.alnmrc.com/105747f02ba6438f9008f721672b9d96.png).
 
 ### Building the project and configuring the bot
 1. Open the project, select the startup bot, and compile it.
@@ -39,7 +38,7 @@ In order to run the bots, you must first create an application for them, build t
 5. Our bot is now configured, but we need to add it to our server first.
 
 ### Adding the bot to your server
-1. Go back to your app page, and copy your bot's [**client ID**](http://i.imgur.com/NuAPpoY.png).
+1. Go back to your app page, and copy your bot's [**client ID**](https://storage.alnmrc.com/23a1e055a2954934ab3c69f6ccd4ba62.png).
 2. Go to `https://discordapp.com/oauth2/authorize?client_id=your_app_id_here&scope=bot&permissions=0`.
 3. On the [page](http://i.imgur.com/QeH0o5S.png), select **your server** (1), and press **authorize** (2).
 4. [Done](http://i.imgur.com/LF1gpm2.png)! You can now run the bot!
