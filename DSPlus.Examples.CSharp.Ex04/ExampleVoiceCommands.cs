@@ -137,7 +137,7 @@ namespace DSPlus.Examples
             
             try
             {
-                vnc.SendSpeaking(true);
+                await vnc.SendSpeakingAsync(true);
 
                 var psi = new ProcessStartInfo
                 {
@@ -156,7 +156,7 @@ namespace DSPlus.Examples
             catch (Exception ex) { exc = ex; }
             finally
             {
-                vnc.SendSpeaking(false);
+                await vnc.SendSpeakingAsync(false);
             }
 
             if (exc != null)
