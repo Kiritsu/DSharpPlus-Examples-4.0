@@ -152,11 +152,13 @@ namespace DSPlus.Examples
                 var txStream = vnc.GetTransmitStream();
                 await ffout.CopyToAsync(txStream);
                 await txStream.FlushAsync();
+                await vnc.WaitForPlaybackFinishAsync();
             }
             catch (Exception ex) { exc = ex; }
             finally
             {
                 await vnc.SendSpeakingAsync(false);
+                await ctx.Message.RespondAsync($"Finished playing `{filename}`");
             }
 
             if (exc != null)
