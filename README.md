@@ -41,7 +41,7 @@ In order to run the bots, you must first create an application for them, build t
 1. Go back to your app page, and copy your bot's [**client ID**](https://i.alnmrc.com/a4a875102c844a9496aac3c3df8c6095.png).
 2. Go to `https://discordapp.com/oauth2/authorize?client_id=your_app_id_here&scope=bot&permissions=0`.
 3. On the [page](https://i.alnmrc.com/5b9518536ad64f209348878a6c077b68.png), select **your server** (1), and press **authorize** (2).
-4. Verify that you are not a robot and you're done [Done](https://i.alnmrc.com/9765b4f11401423280f539166fd49520.png)! You can now run the bot!
+4. Verify that you are not a robot and you're [done](https://i.alnmrc.com/9765b4f11401423280f539166fd49520.png)! You can now run the bot!
 
 ### Running the bots
 1. Go back to the IDE and hit **Debug**.
