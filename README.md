@@ -23,12 +23,12 @@ You will also need to install [.NET Core 3.1 SDK](https://www.microsoft.com/net/
 In order to run the bots, you must first create an application for them, build the bots, then configure them.
 
 ### Create the application
-1. Go to [my applications](https://discordapp.com/developers/applications/me) page on Discord Developer portal.
-2. Press the [**new app** button](https://storage.alnmrc.com/90628f97e29f42cab9e8d4fd671891c1.png).
-3. [**New app** page](https://storage.alnmrc.com/461efa889e4e493297ae495179c6aef7.png) will open. Enter your bot's name in the **name** field.
-4. When you're done, press the [**create** button](https://storage.alnmrc.com/16b854aad8404230baecd98c7a2d6535.png).
-5. When the app is created, click **bot** then press the [**add bot** button](https://storage.alnmrc.com/1d3a26369f1c4d3b859e103c647333db.png).
-6. Once this is done, you will need to copy the **bot's token**. Under **app bot user**, there's a **token** field, press copy [**the resulting value**](https://storage.alnmrc.com/105747f02ba6438f9008f721672b9d96.png).
+1. Go to [my applications](https://discord.com/developers/applications) page on Discord Developer portal.
+2. Press the [**new app** button](https://i.alnmrc.com/29d16ffddcd8435f99e86ffa78a86504.png).
+3. [**New app** page](https://i.alnmrc.com/abeb12f1133046c6b7f08c0fa4263739.png) will open. Enter your bot's name in the **name** field.
+4. When you're done, press the [**create** button](https://i.alnmrc.com/627753c5866249f5b4d3b842c00e7bc5.png).
+5. When the app is created, jump to the **bot** section and press the [**add bot** button](https://i.alnmrc.com/f69a561b41ad45cf97a78602decd7778.png).
+6. Once this is done, you will need to copy the **bot's token**. Under **app bot user**, there's a **token** field, press copy [**the resulting value**](https://i.alnmrc.com/159c9553915d49e9abd57286c3577ee4.png).
 
 ### Building the project and configuring the bot
 1. Open the project, select the startup bot, and compile it.
@@ -38,14 +38,14 @@ In order to run the bots, you must first create an application for them, build t
 5. Our bot is now configured, but we need to add it to our server first.
 
 ### Adding the bot to your server
-1. Go back to your app page, and copy your bot's [**client ID**](https://storage.alnmrc.com/23a1e055a2954934ab3c69f6ccd4ba62.png).
+1. Go back to your app page, and copy your bot's [**client ID**](https://i.alnmrc.com/a4a875102c844a9496aac3c3df8c6095.png).
 2. Go to `https://discordapp.com/oauth2/authorize?client_id=your_app_id_here&scope=bot&permissions=0`.
-3. On the [page](http://i.imgur.com/QeH0o5S.png), select **your server** (1), and press **authorize** (2).
-4. [Done](http://i.imgur.com/LF1gpm2.png)! You can now run the bot!
+3. On the [page](https://i.alnmrc.com/5b9518536ad64f209348878a6c077b68.png), select **your server** (1), and press **authorize** (2).
+4. Verify that you are not a robot and you're done [Done](https://i.alnmrc.com/9765b4f11401423280f539166fd49520.png)! You can now run the bot!
 
 ### Running the bots
 1. Go back to the IDE and hit **Debug**.
-2. Congratulations! [Your bot is running](http://i.imgur.com/VXpCt1P.png)!
+2. Congratulations! [Your bot is running](https://i.alnmrc.com/d890f078488e440bb121e1b8f4b5c56f.png)!
 
 ### Note on WinForms and WPF examples
 Windows Forms (WinForms), Windows Presentation Foundation (WPF), and Universal Windows Platform (UWP) are ***not officially supported*** ways of running your bot. These examples exist for educational purposes only.
