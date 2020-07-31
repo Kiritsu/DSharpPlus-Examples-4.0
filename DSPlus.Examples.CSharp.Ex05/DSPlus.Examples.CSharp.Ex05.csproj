@@ -83,7 +83,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DSharpPlus" Version="4.0.0-nightly-00709" />
+    <PackageReference Include="DSharpPlus" Version="4.0.0-nightly-00711" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
