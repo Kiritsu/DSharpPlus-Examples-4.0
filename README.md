@@ -1,3 +1,5 @@
+[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=Kiritsu/DSharpPlus-Examples-4.0)](https://dependabot.com)
+
 # DSharpPlus Example Bots
 These are example bots for DSharpPlus library.
 
