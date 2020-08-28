@@ -145,7 +145,7 @@ namespace DSPlus.Examples
         {
             // let's log the details of the error that just 
             // occured in our client
-            e.Client.Logger.LogError(e.Exception, "Exception occured");
+            e.Client.Logger.LogError(BotEventId, e.Exception, "Exception occured");
 
             // since this method is not async, let's return
             // a completed task, so that no additional work
