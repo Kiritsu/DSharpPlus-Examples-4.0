@@ -27,12 +27,15 @@ using System.Text;
 using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.EventArgs;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
 namespace DSPlus.Examples
 {
     public class Program
     {
+        public readonly EventId BotEventId = new EventId(42, "Bot-Ex01");
+        
         public DiscordClient Client { get; set; }
 
         public static void Main(string[] args)
@@ -60,8 +63,7 @@ namespace DSPlus.Examples
                 TokenType = TokenType.Bot,
 
                 AutoReconnect = true,
-                LogLevel = LogLevel.Debug,
-                UseInternalLogHandler = true
+                MinimumLogLevel = LogLevel.Debug
             };
 
             // then we want to instantiate our client
@@ -83,8 +85,8 @@ namespace DSPlus.Examples
         private Task Client_Ready(ReadyEventArgs e)
         {
             // let's log the fact that this event occured
-            e.Client.DebugLogger.LogMessage(LogLevel.Info, "ExampleBot", "Client is ready to process events.", DateTime.Now);
-
+            e.Client.Logger.LogInformation(BotEventId, "Client is ready to process events.");
+            
             // since this method is not async, let's return
             // a completed task, so that no additional work
             // is done
@@ -95,7 +97,7 @@ namespace DSPlus.Examples
         {
             // let's log the name of the guild that was just
             // sent to our client
-            e.Client.DebugLogger.LogMessage(LogLevel.Info, "ExampleBot", $"Guild available: {e.Guild.Name}", DateTime.Now);
+            e.Client.Logger.LogInformation(BotEventId, $"Guild available: {e.Guild.Name}");
 
             // since this method is not async, let's return
             // a completed task, so that no additional work
@@ -107,7 +109,7 @@ namespace DSPlus.Examples
         {
             // let's log the details of the error that just 
             // occured in our client
-            e.Client.DebugLogger.LogMessage(LogLevel.Error, "ExampleBot", $"Exception occured: {e.Exception.GetType()}: {e.Exception.Message}", DateTime.Now);
+            e.Client.Logger.LogError(BotEventId, e.Exception, "Exception occured");
 
             // since this method is not async, let's return
             // a completed task, so that no additional work

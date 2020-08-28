@@ -32,12 +32,15 @@ using DSharpPlus.Entities;
 using DSharpPlus.EventArgs;
 using DSharpPlus.Interactivity;
 using DSharpPlus.Interactivity.Enums;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
 namespace DSPlus.Examples
 {
     public class Program
     {
+        public readonly EventId BotEventId = new EventId(42, "Bot-Ex03");
+        
         public DiscordClient Client { get; set; }
         public InteractivityExtension Interactivity { get; set; }
         public CommandsNextExtension Commands { get; set; }
@@ -67,8 +70,7 @@ namespace DSPlus.Examples
                 TokenType = TokenType.Bot,
 
                 AutoReconnect = true,
-                LogLevel = LogLevel.Debug,
-                UseInternalLogHandler = true
+                MinimumLogLevel = LogLevel.Debug
             };
 
             // then we want to instantiate our client
@@ -151,8 +153,8 @@ namespace DSPlus.Examples
         private Task Client_Ready(ReadyEventArgs e)
         {
             // let's log the fact that this event occured
-            e.Client.DebugLogger.LogMessage(LogLevel.Info, "ExampleBot", "Client is ready to process events.", DateTime.Now);
-
+            e.Client.Logger.LogInformation(BotEventId, "Client is ready to process events.");
+            
             // since this method is not async, let's return
             // a completed task, so that no additional work
             // is done
@@ -163,7 +165,7 @@ namespace DSPlus.Examples
         {
             // let's log the name of the guild that was just
             // sent to our client
-            e.Client.DebugLogger.LogMessage(LogLevel.Info, "ExampleBot", $"Guild available: {e.Guild.Name}", DateTime.Now);
+            e.Client.Logger.LogInformation(BotEventId, $"Guild available: {e.Guild.Name}");
 
             // since this method is not async, let's return
             // a completed task, so that no additional work
@@ -175,7 +177,7 @@ namespace DSPlus.Examples
         {
             // let's log the details of the error that just 
             // occured in our client
-            e.Client.DebugLogger.LogMessage(LogLevel.Error, "ExampleBot", $"Exception occured: {e.Exception.GetType()}: {e.Exception.Message}", DateTime.Now);
+            e.Client.Logger.LogError(BotEventId, e.Exception, "Exception occured");
 
             // since this method is not async, let's return
             // a completed task, so that no additional work
@@ -186,7 +188,7 @@ namespace DSPlus.Examples
         private Task Commands_CommandExecuted(CommandExecutionEventArgs e)
         {
             // let's log the name of the command and user
-            e.Context.Client.DebugLogger.LogMessage(LogLevel.Info, "ExampleBot", $"{e.Context.User.Username} successfully executed '{e.Command.QualifiedName}'", DateTime.Now);
+            e.Context.Client.Logger.LogInformation(BotEventId, $"{e.Context.User.Username} successfully executed '{e.Command.QualifiedName}'");
 
             // since this method is not async, let's return
             // a completed task, so that no additional work
@@ -197,7 +199,7 @@ namespace DSPlus.Examples
         private async Task Commands_CommandErrored(CommandErrorEventArgs e)
         {
             // let's log the error details
-            e.Context.Client.DebugLogger.LogMessage(LogLevel.Error, "ExampleBot", $"{e.Context.User.Username} tried executing '{e.Command?.QualifiedName ?? "<unknown command>"}' but it errored: {e.Exception.GetType()}: {e.Exception.Message ?? "<no message>"}", DateTime.Now);
+            e.Context.Client.Logger.LogError(BotEventId, $"{e.Context.User.Username} tried executing '{e.Command?.QualifiedName ?? "<unknown command>"}' but it errored: {e.Exception.GetType()}: {e.Exception.Message ?? "<no message>"}", DateTime.Now);
 
             // let's check if the error is a result of lack
             // of required permissions
